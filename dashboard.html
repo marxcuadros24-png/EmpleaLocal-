@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EmpleaLocal - Panel de Control</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">   
+    <div class="logo">
+      <img src="imagenes/logo1.png" alt="Logo EmpleaLocal">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="buscar.html">Buscar Empleo</a></li>
+        <li><a href="dashboard.html" class="active">Panel</a></li>
+        <li><a href="#" onclick="logout()" style="color: #c00;">Cerrar Sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="dashboard-container">
+    <!-- Header Dashboard -->
+    <div class="dashboard-header">
+      <div>
+        <h1 id="dashboardTitle">Panel de Control</h1>
+        <p id="userInfo"></p>
+      </div>
+      <button id="actionButton" class="btn-primary-custom" style="display: none;">
+        + Nueva Oferta
+      </button>
+    </div>
+
+    <!-- Estadísticas -->
+    <div class="stats-grid" id="statsGrid"></div>
+
+    <!-- Contenido Principal -->
+    <div id="mainContent"></div>
+  </div>
+
+  <!-- Modal para Publicar Empleo -->
+  <div id="jobModal" class="modal">
+    <div class="modal-content">
+      <h2 style="margin-top: 0;">📝 Publicar Nueva Oferta</h2>
+      <form id="jobForm">
+        <div class="form-group">
+          <label for="jobTitle">Título del Puesto *</label>
+          <input type="text" id="jobTitle" required placeholder="Ej: Auxiliar de Ventas">
+        </div>
+
+        <div class="form-group">
+          <label for="jobDescription">Descripción *</label>
+          <textarea id="jobDescription" rows="4" required placeholder="Describe las responsabilidades..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="jobCategory">Categoría *</label>
+          <select id="jobCategory" required>
+            <option value="servicios">Servicios</option>
+            <option value="construccion">Construcción</option>
+            <option value="tecnologia">Tecnología</option>
+            <option value="educacion">Educación</option>
+            <option value="comercio">Comercio</option>
+            <option value="transporte">Transporte</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="jobLocation">Ubicación *</label>
+          <input type="text" id="jobLocation" required value="Coracora" placeholder="Barrio Central, Coracora">
+        </div>
+
+        <div class="form-group">
+          <label for="jobSalary">Salario *</label>
+          <input type="text" id="jobSalary" required placeholder="S/1200 - S/1500">
+        </div>
+
+        <div class="form-group">
+          <label for="jobType">Tipo de Empleo *</label>
+          <select id="jobType" required>
+            <option value="Tiempo Completo">Tiempo Completo</option>
+            <option value="Medio Tiempo">Medio Tiempo</option>
+            <option value="Remoto">Remoto</option>
+            <option value="Por Proyecto">Por Proyecto</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="jobRequirements">Requisitos</label>
+          <textarea id="jobRequirements" rows="3" placeholder="Requisitos del puesto (opcional)..."></textarea>
+        </div>
+
+        <div style="display: flex; gap: 1rem;">
+          <button type="submit" class="btn-primary-custom" style="flex: 1;">Publicar</button>
+          <button type="button" onclick="closeJobModal()" class="btn-secondary">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer id="contacto">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>EmpleaLocal</h3>
+        <p>Conectando talento local en Coracora</p>
+      </div>
+      <div class="footer-section">
+        <h3>Enlaces rápidos</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="buscar.html">Buscar Empleo</a></li>
+          <li><a href="oportunidades.html">Oportunidades</a></li>
+          <li><a href="sobre.html">Sobre Nosotros</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contacto</h3>
+        <p>📍 Coracora, Ayacucho, Perú</p>
+        <p>📧 info@emplealocal.pe</p>
+        <p>📱 +51 999 999 999</p>
+      </div>
+      <div class="footer-section">
+        <h3>Síguenos</h3>
+        <div class="social">
+          <a href="https://www.facebook.com" target="_blank" title="Facebook">
+            <img src="imagenes/facebook.png" alt="Facebook">
+          </a>
+          <a href="https://www.instagram.com" target="_blank" title="Instagram">
+            <img src="imagenes/instagram.png" alt="Instagram">
+          </a>
+          <a href="https://www.linkedin.com" target="_blank" title="LinkedIn">
+            <img src="imagenes/linkedin.png" alt="LinkedIn">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 EmpleaLocal - Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/storage.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/dashboard.js"></script>
+
+</body>
+</html>

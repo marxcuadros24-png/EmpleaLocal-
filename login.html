@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EmpleaLocal - Iniciar Sesión</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">   
+    <div class="logo">
+      <img src="imagenes/logo1.png" alt="Logo EmpleaLocal">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="buscar.html">Buscars Empleo</a></li>
+        <li><a href="oportunidades.html">Oportunidades</a></li>
+        <li><a href="sobre.html">Sobre Nosotros</a></li>
+        <li><a href="login.html" class="active">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- LOGIN CONTAINER -->
+  <div class="login-container">
+    <div class="login-box">
+      <div class="login-header">
+        <h1 id="formTitle"> Bienvenido</h1>
+        <p id="formSubtitle">Inicia sesión para continuar</p>
+      </div>
+
+      <div id="alertBox"></div>
+
+      <!-- Selector de tipo de usuario -->
+      <div id="userTypeSelector" class="user-type-selector" style="display: none;">
+        <button type="button" class="user-type-btn active" data-type="applicant" onclick="selectUserType('applicant')">
+          <div class="icon">👤</div>
+          <div><strong>Postulante</strong></div>
+          <div style="font-size: 0.85rem;">Busco trabajo</div>
+        </button>
+        <button type="button" class="user-type-btn" data-type="employer" onclick="selectUserType('employer')">
+          <div class="icon">🏢</div>
+          <div><strong>Empleador</strong></div>
+          <div style="font-size: 0.85rem;">Ofrezco trabajo</div>
+        </button>
+      </div>
+
+      <form id="authForm">
+        <!-- Nombre (solo registro) -->
+        <div class="form-group" id="nameGroup" style="display: none;">
+          <label for="name">Nombre Completo</label>
+          <input type="text" id="name" placeholder="Tu nombre completo">
+        </div>
+
+        <!-- Empresa (solo registro empleador) -->
+        <div class="form-group" id="companyGroup" style="display: none;">
+          <label for="company">Nombre de la Empresa</label>
+          <input type="text" id="company" placeholder="Nombre de tu empresa">
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="tu@email.com" required>
+        </div>
+
+        <!-- Contraseña -->
+        <div class="form-group">
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" placeholder="••••••••" required>
+        </div>
+
+        <button type="submit" class="btn-submit" id="submitBtn">
+          Iniciar Sesión
+        </button>
+      </form>
+
+      <div class="toggle-mode">
+        <span id="toggleText">¿No tienes cuenta?</span>
+        <button type="button" id="toggleBtn">Regístrate</button>
+      </div>
+
+      <div class="demo-credentials">
+        <strong>💡 Credenciales de prueba:</strong><br>
+        Empleador: <code>empleador@test.com</code> / <code>123456</code><br>
+        Postulante: <code>postulante@test.com</code> / <code>123456</code>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/storage.js"></script>
+  <script src="js/auth.js"></script>
+  <!-- ⚠️ ELIMINADA LA INICIALIZACIÓN DUPLICADA -->
+
+</body>
+</html>
