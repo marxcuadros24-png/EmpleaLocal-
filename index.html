@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EmpleaLocal - Plataforma de empleos locales en Coracora, Ayacucho">
+  <meta name="keywords" content="empleo, trabajo, Coracora, Ayacucho, empleos locales">
+  <title>EmpleaLocal - Encuentra tu trabajo en Coracora</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">   
+    <div class="logo">
+      <img src="imagenes/logo1.png" alt="Logo EmpleaLocal">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Inicio</a></li>
+        <li><a href="buscar.html">Buscar Empleo</a></li>
+        <li><a href="oportunidades.html">Oportunidades</a></li>
+        <li><a href="sobre.html">Sobre Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li id="authNavLink"><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Encuentra tu empleo ideal en <span>Coracora</span></h1>
+      <p>Conecta digitalmente a trabajadores y empleadores locales de forma rápida, segura y eficiente.</p>
+      <div class="buttons">
+        <a href="buscar.html" class="btn btn-primary">🔍 Buscar Empleo</a>
+        <a href="login.html" class="btn btn-secondary">📝 Publicar Oferta</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFERTAS RECIENTES CON CARRUSEL -->
+  <section class="ofertas-section">
+    <div class="carousel-fondo">
+      <div class="slide active" style="background-image: url('imagenes/comida.png');"></div>
+      <div class="slide" style="background-image: url('imagenes/construccion.jpg');"></div>
+      <div class="slide" style="background-image: url('imagenes/docentes.jpg');"></div>
+      <div class="slide" style="background-image: url('imagenes/deliveri.jpg');"></div>
+      <div class="slide" style="background-image: url('imagenes/tiendaropa.jpg');"></div>
+    </div>
+
+    <div class="ofertas-content">
+      <h2>✨ Últimos empleos publicados</h2>
+      <div class="cards" id="recentJobsCards">
+        <!-- Se llenarán dinámicamente con JavaScript -->
+        <div class="card">
+          <h3>🛍️ Auxiliar de Ventas</h3>
+          <p class="ubicacion">Comercio · Barrio Central</p>
+          <a href="buscar.html" class="btn-card">Ver detalles</a>
+        </div>
+        <div class="card">
+          <h3>🏗️ Obrero de Construcción</h3>
+          <p class="ubicacion">Construcción · Chihuacc</p>
+          <a href="buscar.html" class="btn-card">Ver detalles</a>
+        </div>
+        <div class="card">
+          <h3>📚 Docente de Primaria</h3>
+          <p class="ubicacion">Educación · Coracora</p>
+          <a href="buscar.html" class="btn-card">Ver detalles</a>
+        </div>
+      </div>
+      <div class="ver-mas">
+        <a href="buscar.html" class="btn btn-primary">Ver todas las ofertas →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORÍAS POPULARES -->
+  <section class="categorias">
+    <h2>📂 Categorías Populares</h2>
+    <div class="grid">
+      <div class="cat" onclick="location.href='buscar.html?categoria=servicios'">
+        <span class="cat-icon">⚙️</span>
+        <span>Servicios</span>
+      </div>
+      <div class="cat" onclick="location.href='buscar.html?categoria=construccion'">
+        <span class="cat-icon">🧱</span>
+        <span>Construcción</span>
+      </div>
+      <div class="cat" onclick="location.href='buscar.html?categoria=tecnologia'">
+        <span class="cat-icon">💻</span>
+        <span>Tecnología</span>
+      </div>
+      <div class="cat" onclick="location.href='buscar.html?categoria=educacion'">
+        <span class="cat-icon">🎓</span>
+        <span>Educación</span>
+      </div>
+      <div class="cat" onclick="location.href='buscar.html?categoria=comercio'">
+        <span class="cat-icon">🛍️</span>
+        <span>Comercio</span>
+      </div>
+      <div class="cat" onclick="location.href='buscar.html?categoria=transporte'">
+        <span class="cat-icon">🚚</span>
+        <span>Transporte</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contacto">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>EmpleaLocal</h3>
+        <p>Conectando talento local en Coracora</p>
+      </div>
+      <div class="footer-section">
+        <h3>Enlaces rápidos</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="buscar.html">Buscar Empleo</a></li>
+          <li><a href="oportunidades.html">Oportunidades</a></li>
+          <li><a href="sobre.html">Sobre Nosotros</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contacto</h3>
+         <p>📍 <a href="https://maps.app.goo.gl/Lx5BD81hza6UHB4Z7" target="_blank" style="color: inherit; text-decoration: underline;">Coracora, Ayacucho, Perú</a></p>
+        <p>📧 info@emplealocal.pe</p>
+        <p>📱 +51 999 999 999</p>
+      </div>
+      <div class="footer-section">
+        <h3>Síguenos</h3>
+        <div class="social">
+          <a href="https://www.facebook.com" target="_blank" title="Facebook">
+            <img src="imagenes/facebook.png" alt="Facebook">
+          </a>
+          <a href="https://www.instagram.com" target="_blank" title="Instagram">
+            <img src="imagenes/instagram.png" alt="Instagram">
+          </a>
+          <a href="https://www.linkedin.com" target="_blank" title="LinkedIn">
+            <img src="imagenes/linkedin.png" alt="LinkedIn">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 EmpleaLocal - Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/storage.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // ============================================
+    // ACTUALIZAR NAVBAR CON USUARIO LOGUEADO
+    // ============================================
+    document.addEventListener('DOMContentLoaded', () => {
+      updateAuthLink();
+      loadRecentJobs();
+    });
+
+    /**
+     * Actualizar enlace de autenticación en navbar
+     */
+    function updateAuthLink() {
+      const authLink = document.getElementById('authNavLink');
+      if (!authLink) return;
+
+      // Verificar si hay usuario logueado
+      const currentUserStr = localStorage.getItem('emplealocal_currentUser');
+      
+      if (currentUserStr) {
+        try {
+          const currentUser = JSON.parse(currentUserStr);
+          
+          // Mostrar nombre de usuario y enlace a dashboard
+          authLink.innerHTML = `
+            <a href="dashboard.html" style="color: #667eea; font-weight: 600;">
+              👤 ${escapeHtml(currentUser.name)}
+            </a>
+          `;
+          
+          console.log('✅ Usuario logueado:', currentUser.name);
+        } catch (error) {
+          console.error('❌ Error al parsear usuario:', error);
+          authLink.innerHTML = '<a href="login.html">Login</a>';
+        }
+      } else {
+        // No hay usuario logueado
+        authLink.innerHTML = '<a href="login.html">Login</a>';
+      }
+    }
+
+    /**
+     * Cargar empleos recientes dinámicamente
+     */
+    function loadRecentJobs() {
+      const cardsContainer = document.getElementById('recentJobsCards');
+      if (!cardsContainer) return;
+
+      // Verificar si StorageManager está disponible
+      if (typeof StorageManager === 'undefined') {
+        console.log('⚠️ StorageManager no disponible, usando cards estáticas');
+        return;
+      }
+
+      try {
+        const allJobs = StorageManager.getJobs();
+        
+        if (allJobs && allJobs.length > 0) {
+          // Mostrar últimos 3 empleos
+          const recentJobs = allJobs.slice(0, 3);
+          
+          const cardsHTML = recentJobs.map(job => `
+            <div class="card">
+              <h3>${escapeHtml(job.title)}</h3>
+              <p class="ubicacion">${escapeHtml(job.category)} · ${escapeHtml(job.location)}</p>
+              <a href="buscar.html" class="btn-card">Ver detalles</a>
+            </div>
+          `).join('');
+          
+          cardsContainer.innerHTML = cardsHTML;
+          console.log(`✅ ${recentJobs.length} empleos recientes cargados`);
+        }
+      } catch (error) {
+        console.error('❌ Error al cargar empleos:', error);
+      }
+    }
+
+    /**
+     * Escapar HTML para prevenir XSS
+     */
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+  </script>
+</body>
+</html>

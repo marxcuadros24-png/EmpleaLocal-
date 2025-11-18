@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conoce más sobre EmpleaLocal y nuestra misión">
+  <title>EmpleaLocal - Sobre Nosotros</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Estilos adicionales para las imágenes */
+    .hero-secundario {
+      background: linear-gradient(rgba(102, 126, 234, 0.8), rgba(118, 75, 162, 0.8)),
+                  url('imagenes/coracora-vista.jpg') center/cover no-repeat;
+      min-height: 300px;
+    }
+
+    .sobre-imagen {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .imagen-placeholder {
+      min-height: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #f0f0f0;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .imagen-placeholder img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .equipo-imagen-container {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      max-width: 600px;
+      margin: 2rem auto;
+    }
+
+    .equipo-imagen-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Efecto hover en imágenes */
+    .sobre-imagen:hover,
+    .equipo-imagen-container img:hover {
+      transform: scale(1.02);
+      transition: transform 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">   
+    <div class="logo">
+      <img src="imagenes/logo1.png" alt="Logo EmpleaLocal">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="buscar.html">Buscar Empleo</a></li>
+        <li><a href="oportunidades.html">Oportunidades</a></li>
+        <li><a href="sobre.html" class="active">Sobre Nosotros</a></li>
+        <li id="authNavLink"><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO SECUNDARIO CON IMAGEN DE FONDO -->
+  <section class="hero-secundario">
+    <h1> Sobre EmpleaLocal</h1>
+    <p>Impulsando el desarrollo económico de Coracora</p>
+  </section>
+
+  <!-- NUESTRA HISTORIA -->
+  <section class="sobre-section">
+    <div class="sobre-grid">
+      <div class="sobre-texto">
+        <h2>Nuestra Historia</h2>
+        <p>
+          EmpleaLocal nace en 2025 con una visión clara: <strong>conectar el talento local 
+          de Coracora con las oportunidades laborales</strong> que existen en nuestra 
+          comunidad.
+        </p>
+        <p>
+          Vimos que muchas empresas locales tenían dificultades para encontrar 
+          trabajadores capacitados, mientras que muchos coracoreños buscaban 
+          empleo sin saber dónde encontrar oportunidades reales.
+        </p>
+        <p>
+          Decidimos crear una plataforma digital que <strong>elimine estas barreras</strong>, 
+          haciendo que el proceso de búsqueda de empleo y contratación sea más 
+          rápido, transparente y eficiente para todos.
+        </p>
+      </div>
+      <div class="imagen-placeholder">
+        <img src="imagenes/equipo-trabajando.jpg" 
+             alt="Equipo colaborando" 
+             class="sobre-imagen"
+             onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=\'font-size: 5rem;\'>💼</span><p>Conectando Talento</p>'">
+      </div>
+    </div>
+  </section>
+
+  <!-- MISIÓN Y VISIÓN -->
+  <section class="mision-vision">
+    <div class="mv-grid">
+      <div class="mv-card">
+        <div class="mv-icon">🎯</div>
+        <h3>Misión</h3>
+        <p>
+          Facilitar el acceso al empleo digno y de calidad en Coracora, 
+          conectando de manera eficiente a trabajadores locales con empresas 
+          que valoran su talento, promoviendo así el desarrollo económico 
+          sostenible de nuestra comunidad.
+        </p>
+      </div>
+      <div class="mv-card">
+        <div class="mv-icon">🚀</div>
+        <h3>Visión</h3>
+        <p>
+          Ser la plataforma líder de empleo en Coracora y la región Ayacucho, 
+          reconocida por reducir la brecha entre oferta y demanda laboral, 
+          y por contribuir significativamente al crecimiento profesional de 
+          nuestra comunidad.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALORES -->
+  <section class="valores-section">
+    <h2>Nuestros Valores</h2>
+    <div class="valores-grid">
+      <div class="valor-card">
+        <div class="valor-icon">🤝</div>
+        <h3>Compromiso Local</h3>
+        <p>
+          Priorizamos el desarrollo de nuestra comunidad y el bienestar de 
+          los coracoreños.
+        </p>
+      </div>
+      <div class="valor-card">
+        <div class="valor-icon">✨</div>
+        <h3>Transparencia</h3>
+        <p>
+          Información clara y honesta en todas las ofertas laborales y procesos.
+        </p>
+      </div>
+      <div class="valor-card">
+        <div class="valor-icon">🎓</div>
+        <h3>Inclusión</h3>
+        <p>
+          Oportunidades para todos, sin discriminación de ningún tipo.
+        </p>
+      </div>
+      <div class="valor-card">
+        <div class="valor-icon">💡</div>
+        <h3>Innovación</h3>
+        <p>
+          Uso de tecnología para hacer más accesible el mercado laboral local.
+        </p>
+      </div>
+      <div class="valor-card">
+        <div class="valor-icon">🌱</div>
+        <h3>Crecimiento</h3>
+        <p>
+          Fomentamos el desarrollo profesional continuo de nuestra comunidad.
+        </p>
+      </div>
+      <div class="valor-card">
+        <div class="valor-icon">💚</div>
+        <h3>Responsabilidad</h3>
+        <p>
+          Compromiso con prácticas laborales justas y éticas.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESTADÍSTICAS -->
+  <section class="estadisticas-sobre">
+    <h2>Nuestro Impacto</h2>
+    <div class="stats-grid-grande">
+      <div class="stat-card-grande">
+        <div class="stat-icon">👥</div>
+        <div class="stat-info">
+          <h3 class="stat-number">500+</h3>
+          <p>Usuarios Registrados</p>
+          <span class="stat-descripcion">Trabajadores y empleadores activos</span>
+        </div>
+      </div>
+      <div class="stat-card-grande">
+        <div class="stat-icon">💼</div>
+        <div class="stat-info">
+          <h3 class="stat-number">150+</h3>
+          <p>Empleos Publicados</p>
+          <span class="stat-descripcion">Oportunidades laborales activas</span>
+        </div>
+      </div>
+      <div class="stat-card-grande">
+        <div class="stat-icon">✅</div>
+        <div class="stat-info">
+          <h3 class="stat-number">280+</h3>
+          <p>Conexiones Exitosas</p>
+          <span class="stat-descripcion">Contrataciones realizadas</span>
+        </div>
+      </div>
+      <div class="stat-card-grande">
+        <div class="stat-icon">🏢</div>
+        <div class="stat-info">
+          <h3 class="stat-number">80+</h3>
+          <p>Empresas Asociadas</p>
+          <span class="stat-descripcion">Negocios locales confiando en nosotros</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NUESTRO EQUIPO -->
+ <section class="sobre-section" style="background: #f9f9f9;">
+    <div class="container" style="text-align: center; max-width: 800px; margin: 0 auto;">
+      <h2>Nuestro Equipo</h2>
+      <p style="font-size: 1.1rem; line-height: 1.8; margin: 2rem 0;">
+        Somos un grupo de jóvenes profesionales coracoreños comprometidos con 
+        el desarrollo de nuestra región. Combinamos <strong>experiencia local</strong> 
+        con <strong>conocimientos tecnológicos</strong> para crear soluciones que 
+        realmente respondan a las necesidades de nuestra comunidad.
+      </p>
+      <div class="equipo-imagen-container" id="equipoContainer">
+        <img src="imagenes/equipo-emplealocal.jpg" 
+             alt="Equipo EmpleaLocal"
+             id="equipoImagen"
+             onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'imagen-placeholder\' style=\'margin: 2rem auto; max-width: 500px;\'><span style=\'font-size: 5rem;\'>👨‍💼👩‍💼</span><p>Equipo EmpleaLocal</p></div>'">
+        
+        <!-- Hotspots para cada persona -->
+        
+        <!-- Persona 1 - Izquierda -->
+        <a href="https://www.facebook.com/rodrigo.retamozo.345046" 
+           target="_blank" 
+           class="persona-hotspot" 
+           style="top: 15%; left: 10%; width: 28%; height: 70%;"
+           title="Ver perfil de Facebook">
+          <div class="persona-tooltip">Rodrigo Muñoa - Secretaria</div>
+          
+        </a>
+
+        <!-- Persona 2 - Centro -->
+        <a href="https://www.facebook.com/marx.cuadros" 
+           target="_blank" 
+           class="persona-hotspot" 
+           style="top: 15%; left: 38%; width: 28%; height: 70%;"
+           title="Ver perfil de Facebook">
+          <div class="persona-tooltip">Marx Cuadros Flores - Fundador</div>
+        </a>
+
+        <!-- Persona 3 - Derecha -->
+        <a href="https://www.facebook.com/denisfray.bellidocarhuas" 
+           target="_blank" 
+           class="persona-hotspot" 
+           style="top: 15%; left: 66%; width: 28%; height: 70%;"
+           title="Ver perfil de Facebook">
+          <div class="persona-tooltip">Denis Bellido Carhuas - Asistenta Administrativa </div>
+          
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALIADOS -->
+  <section class="valores-section" style="background: white;">
+    <h2>Nuestros Aliados</h2>
+    <p style="text-align: center; color: #666; margin-bottom: 3rem; font-size: 1.1rem;">
+      Trabajamos con organizaciones locales y regionales para ofrecer el mejor servicio
+    </p>
+    <div class="valores-grid">
+      <div class="valor-card">
+        <div class="valor-icon">🏛️</div>
+        <h3>Municipalidad de Coracora</h3>
+        <p>Apoyo institucional y promoción de empleo local</p>
+      </div>
+      <div class="valor-card">
+        <div class="valor-icon">🏢</div>
+        <h3>Cámara de Comercio</h3>
+        <p>Red de empresas y oportunidades de negocio</p>
+      </div>
+      <div class="valor-card">
+        <div class="valor-icon">🎓</div>
+        <h3>SENATI Ayacucho</h3>
+        <p>Capacitaciones técnicas y certificaciones</p>
+      </div>
+      <div class="valor-card">
+        <div class="valor-icon">💼</div>
+        <h3>Ministerio de Trabajo</h3>
+        <p>Programas de empleo y formalización laboral</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta-final">
+    <h2>¿Listo para Empezar?</h2>
+    <p>Únete a la comunidad laboral más grande de Coracora</p>
+    <div class="cta-buttons">
+      <a href="buscar.html" class="btn btn-primary">🔍 Buscar Empleo</a>
+      <a href="login.html" class="btn btn-secondary">📝 Publicar Oferta</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contacto">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>EmpleaLocal</h3>
+        <p>Conectando talento local en Coracora</p>
+      </div>
+      <div class="footer-section">
+        <h3>Enlaces rápidos</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="buscar.html">Buscar Empleo</a></li>
+          <li><a href="oportunidades.html">Oportunidades</a></li>
+          <li><a href="sobre.html">Sobre Nosotros</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contacto</h3>
+         <p>📍 <a href="https://maps.app.goo.gl/Lx5BD81hza6UHB4Z7" target="_blank" style="color: inherit; text-decoration: underline;">Coracora, Ayacucho, Perú</a></p>
+        <p>📧 info@emplealocal.pe</p>
+        <p>📱 +51 999 999 999</p>
+      </div>
+      <div class="footer-section">
+        <h3>Síguenos</h3>
+        <div class="social">
+          <a href="https://www.facebook.com" target="_blank" title="Facebook">
+            <img src="imagenes/facebook.png" alt="Facebook">
+          </a>
+          <a href="https://www.instagram.com" target="_blank" title="Instagram">
+            <img src="imagenes/instagram.png" alt="Instagram">
+          </a>
+          <a href="https://www.linkedin.com" target="_blank" title="LinkedIn">
+            <img src="imagenes/linkedin.png" alt="LinkedIn">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 EmpleaLocal - Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Actualizar navbar con usuario logueado
+    function updateAuthNavLink() {
+      console.log('🔍 Verificando usuario en sobre.html...');
+      
+      const authLink = document.getElementById('authNavLink');
+      if (!authLink) {
+        console.error('❌ authNavLink no encontrado');
+        return;
+      }
+
+      const currentUserStr = localStorage.getItem('emplealocal_currentUser');
+      console.log('📦 localStorage:', currentUserStr ? 'Usuario encontrado' : 'Sin usuario');
+      
+      if (currentUserStr) {
+        try {
+          const currentUser = JSON.parse(currentUserStr);
+          console.log('✅ Usuario logueado:', currentUser.name);
+          
+          const escapedName = currentUser.name.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+          
+          authLink.innerHTML = `
+            <a href="dashboard.html" style="color: #667eea; font-weight: 600;">
+              👤 ${escapedName}
+            </a>
+          `;
+        } catch (error) {
+          console.error('❌ Error al parsear usuario:', error);
+          authLink.innerHTML = '<a href="login.html">Login</a>';
+        }
+      } else {
+        console.log('ℹ️ No hay usuario logueado');
+        authLink.innerHTML = '<a href="login.html">Login</a>';
+      }
+    }
+
+    // Ejecutar cuando el DOM esté listo
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', updateAuthNavLink);
+    } else {
+      updateAuthNavLink();
+    }
+  </script>
+</body>
+</html>
